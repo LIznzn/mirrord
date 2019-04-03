@@ -13,7 +13,7 @@ warn() {
   echo "$1"
 }
 
-rsync -av --ipv4 --delete rsync://rsync.dante.ctan.org/CTAN /data/mirrors/ctan
+rsync -av --ipv4 --delete rsync://mirrors.tuna.tsinghua.edu.cn/CTAN /mirror/CTAN
 
 
 rm -f $LOCK

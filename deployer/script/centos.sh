@@ -12,7 +12,7 @@ fatal() {
 warn() {
   echo "$1"
 }
-rsync -avzH --timeout=600 --ipv4 --delay-updates  --delete-delay msync.centos.org::CentOS /data/mirrors/centos
+rsync -avzH --timeout=600 --ipv4 --delay-updates  --delete-delay rsync://mirrors.tuna.tsinghua.edu.cn/centos /mirror/centos
 #rsync -avzH --ipv4 --delay-updates  --delete-delay mirrors.kernel.org::centos /data/mirrors/centos
 
 

@@ -12,10 +12,8 @@ fatal() {
 warn() {
   echo "$1"
 }
-SOURCE=rsync://dl.fedoraproject.org/fedora-epel
+SOURCE=rsync://mirrors.tuna.tsinghua.edu.cn/epel
 rsync -vazH --timeout=600 --ipv4 --numeric-ids  --delay-updates --delete-delay \
-   $SOURCE /data/mirrors/epel
-
-/usr/local/bin/report_mirror > /dev/null
+   $SOURCE /mirror/epel
 
 rm -f $LOCK

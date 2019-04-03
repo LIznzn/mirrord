@@ -12,6 +12,7 @@ fatal() {
 warn() {
   echo "$1"
 }
-rsync -rtlzv --ipv4 --delete-delay --delay-updates cran.r-project.org::CRAN /data/mirrors/cran > /dev/null
+rsync -rtlzv --ipv4 --delete-delay --delay-updates rsync://mirrors.tuna.tsinghua.edu.cn/CRAN /mirror/CRAN > /dev/null
+
 rm -f $LOCK
 
